@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Description from './components/description';
+import Image from './components/image';
+import Nom from './components/nom';
+import Prix from './components/prix';
 
 function App() {
+  const nom = prompt(" Entrer votre nom: ");
+  if(nom === ""){
+    alert("Veuillez entrer votre nom");
+  }else{
+    alert(`Bonjour ${nom}`);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nom />
+      <Prix />
+      <Description />
+      <Image />
+      <p>Bonjour {nom}</p>
     </div>
   );
 }
